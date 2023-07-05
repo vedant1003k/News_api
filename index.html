@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awsome -->
+    <script src="https://kit.fontawesome.com/1dc256e2a8.js" crossorigin="anonymous"></script>
+    <!-- media Query -->
+    <link rel="stylesheet" href="mediaQuery.css">
+</head>
+
+<body>
+    <div class="heading-container">
+        <div class="container">
+            <h4>News Website</h4>
+        </div>
+    </div>
+
+    <nav>
+        <div class="main-nav container flex">
+
+            <a href="#" onclick="reload()" class="company-logo flex">
+                <img src="L.png" alt="Site Logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-items" id="football" onclick="onNavItemClick('football')">Football
+                    </li>
+                    <li class="hover-link nav-items" id="science" onclick="onNavItemClick('science')">Science</li>
+                    <li class="hover-link nav-items" id="health" onclick="onNavItemClick('health')">Health</li>
+                    <li class="hover-link nav-items" id="technology" onclick="onNavItemClick('technology')">
+                        Technology
+                    </li>
+                    <li class="hover-link nav-items" id="entertainment" onclick="onNavItemClick('entertainment')">
+                        Entertainment</li>
+                </ul>
+            </div>
+
+            <div class="search-bar flex">
+                <input type="text" id="news-input" class="news-input" placeholder="e.g. Finance">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+
+            <a href="#" class=" nav-toggle hover-link nav-items">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+
+        </div>
+
+    </main>
+
+    <!-- creating templeate or can write code in javascript also for api call -->
+    <template id="template-news-cards">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-img" id="news-img">
+            </div>
+            <div class="card-contant">
+                <h3 id="news-title">this is the title</h3>
+                <h6 class="news-source" id="news-source">end gadgest 20/20/20</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus
+                    delectus debitis modi veritatis
+                    accusamus, perferendis aut quia voluptatibus expedita tempora.</p>
+            </div>
+        </div>
+    </template>
+
+    <!-- scroll up -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="fa-solid fa-arrow-up scrollup__icon"></i>
+    </a>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
